@@ -1,8 +1,8 @@
-![Gnome-Desktop](screenshot-files.png) 
-![Gnome-Desktop-Vim-Tmux](screenshot-vim-tmux.png) ![Gnome-Desktop-Terminal](screenshot.png) 
+![Linux-Desktop](screenshot-files.png) 
+![Linux-Desktop-Vim-Tmux](screenshot-vim-tmux.png) ![Linux-Desktop-Terminal](screenshot.png) 
 
 
-# My Gnome Desktop - Ubuntu and Arch Linux
+# My Linux Desktop - Ubuntu and Arch Linux
 
 > A collection of awesome themes and icons that I use on my Gnome Destop, run on Ubuntu and ArchLinux Operating System 
 
