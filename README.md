@@ -1,5 +1,8 @@
 ![Linux-Desktop](screenshot-files.png) 
-![Linux-Desktop-Vim-Tmux](screenshot-vim-tmux.png) ![Linux-Desktop-Terminal](screenshot.png) 
+
+![Linux-Desktop-Vim-Tmux](screenshot-vim-tmux.png) 
+
+![Linux-Desktop-Terminal](screenshot-terminal.png) 
 
 
 # My Linux Desktop - Ubuntu and Arch Linux
