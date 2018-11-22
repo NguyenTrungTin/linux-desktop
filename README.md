@@ -9,7 +9,7 @@
 
 > A collection of awesome themes and icons that I use on my Gnome Destop, run on Ubuntu and ArchLinux Operating System 
 
-> Thank all opensourcers for their hard-working to build and push beautiful and pushed to [Gnome-Look website](https://www.gnome-look.org/) 
+> Thank all opensourcers for their hard-working to build beautiful themes and icons for Linux Ecosystem.
 
 ## Getting Started
 
@@ -30,13 +30,13 @@ You need to have the `git`, `curl/wget` on your system first.
 To install themes, icons and fonts, you can use the install script using cURL:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/NguyenTrungTin/gnome-desktop/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/NguyenTrungTin/linux-desktop/master/install.sh | bash
 ```
 
 Or Wget:
 
 ```sh
-wget -qO- https://raw.githubusercontent.com/NguyenTrungTin/gnone-desktop/master/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/NguyenTrungTin/linux-desktop/master/install.sh | bash
 ```
 
 ## Contributing
@@ -55,7 +55,8 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - [Sweet Theme](https://github.com/EliverLara/Sweet)
 - [OSX EL Capitan icon](https://www.opendesktop.org/p/1084939/)
 - [La Capitaine icon](https://github.com/keeferrourke/la-capitaine-icon-theme)
-- And many more... Please checkout [Gnome-Look website](https://www.gnome-look.org/) 
+- [Powerline fonts](https://github.com/powerline/fonts)
+- And so much more... Please checkout [Gnome-Look website](https://www.gnome-look.org/) 
 
 ## License
 
