@@ -21,7 +21,7 @@ $slider: #7b7bbd;
 $selected_fg_color: #fefefe;
 $selected_bg_color: #ff5d73;
 $selected_borders_color: darken($selected_bg_color, 10%);
-$borders_color: if($variant == 'light', transparentize(black,0.8), transparentize(#eee,0.9));
+$borders_color: if($variant == 'light', transparentize(black,0.8), darken($bg_color, 7%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
 $link_color: $blue;
 $link_visited_color:transparentize($link_color,0.5);
@@ -76,7 +76,7 @@ $panel_borders_color: transparentize(black, 0.8);
 
 // Disabled state colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
-$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$insensitive_bg_color: if($variant == 'light', mix($bg_color, $base_color, 60%), lighten($base_color, 3%));
 $insensitive_base_color: darken($base_color, 5%);
 $insensitive_borders_color: $borders_color;
 

@@ -2,7 +2,17 @@
  * Nautilus *
  ************/
 .nautilus-window {
-
+  .frame{
+    *:selected, *:selected:backdrop{
+      background: transparent;
+      color: $selected_bg_color;
+    } 
+    *:selected:backdrop{
+      label {
+        color: $backdrop_selected_bg_color;
+      }
+    }
+  }
   paned {
     > separator { background-image: none; }
   }
@@ -59,6 +69,29 @@
   
  .searchbar-container {
     margin-top: -1px;
+  }
+
+  .path-bar-box {
+    .dim-label {
+      color: transparent;
+    }
+    
+    button {
+      transition: all 100ms ease-in;
+      margin-left: -5px;
+      &:backdrop {
+        &:hover,
+        &:active,
+        &:checked {
+          background-color: transparent;
+          color: $backdrop_selected_bg_color;
+          box-shadow: none;
+          label {
+            color: $backdrop_selected_bg_color;
+          }
+        }
+      }
+    }
   }
 }
 

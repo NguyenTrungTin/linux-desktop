@@ -1,7 +1,11 @@
 /**********
  * Switch *
  **********/
-switch {
+ $_switch_bg: if($variant == 'light', transparentize(black, 0.9), lighten($base_color, 10%));
+ $_switch_slider_bg: if($variant == 'light', $base_color, lighten(black, 50%));
+ $_switch_slider_bg_active: if($variant == 'light', $_switch_slider_bg, #fff);
+
+ switch {
   font-size: 1px;
   font-weight: bold;
   outline-offset: -4px;
@@ -12,7 +16,7 @@ switch {
   color: transparent;
   padding: 2px;
 
-  background-color: transparentize(black, 0.9);
+  background-color:$_switch_bg;
   box-shadow: inset 0 0 0 1px transparentize(black, 0.95), 0px 1px $bottom_highlight;
 
   &:disabled {
@@ -33,14 +37,6 @@ switch {
 
     &:backdrop {
       background-color: $backdrop_selected_bg_color;
-
-      slider {
-        &:backdrop {
-          box-shadow:none;
-          background-color:transparentize($base_color, 0.1);
-          border:none;
-        }
-      }
     }
   }
 
@@ -52,7 +48,7 @@ switch {
 
     border-radius: 100%;
     transition: $button_transition;
-    background-color: $base_color;
+    background-color: $_switch_slider_bg;
 
     box-shadow: 0 2px 2px transparentize(black, 0.8),
                 0 1px 2px transparentize(black, 0.8);
@@ -64,7 +60,14 @@ switch {
     }
   }
 
-  &:checked slider { }
+  &:checked slider {
+    background: $_switch_slider_bg_active;
+    &:backdrop {
+      box-shadow:none;
+      background-color:transparentize($base_color, 0.1);
+      border:none;
+    }
+  }
 
   &:backdrop {
   }
