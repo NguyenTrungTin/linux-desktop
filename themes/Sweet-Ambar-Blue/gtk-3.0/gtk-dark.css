@@ -5249,7 +5249,7 @@ button.raven-trigger {
         padding: 3px; }
         .raven .raven-header button.text-button.radio:active, .raven .raven-header button.text-button.radio:checked {
           border-radius: 23px;
-          background: linear-gradient(to right, #eee90a, #0072ff);
+          background: linear-gradient(to right, #00c6ff, #0072ff);
           box-shadow: 0px 2px 4px rgba(0, 114, 255, 0.98);
           color: #fafafa; }
   .raven list {
@@ -5524,6 +5524,60 @@ calendar.raven-calendar {
 window.background.budgie-settings-window.csd > box.horizontal > stack > scrolledwindow buttonbox.inline-toolbar {
   border-style: none none solid; }
 
+.workspace-switcher .workspace-layout {
+  border: 0 solid rgba(0, 0, 0, 0.95); }
+  .top .workspace-switcher .workspace-layout:dir(ltr),
+  .bottom .workspace-switcher .workspace-layout:dir(ltr) {
+    border-left-width: 1px; }
+  .top .workspace-switcher .workspace-layout:dir(rtl),
+  .bottom .workspace-switcher .workspace-layout:dir(rtl) {
+    border-right-width: 1px; }
+  .left .workspace-switcher .workspace-layout,
+  .right .workspace-switcher .workspace-layout {
+    border-top-width: 1px; }
+
+.workspace-switcher .workspace-item,
+.workspace-switcher .workspace-add-button {
+  border: 0 solid rgba(26, 26, 26, 0.95); }
+  .top .workspace-switcher .workspace-item:dir(ltr),
+  .bottom .workspace-switcher .workspace-item:dir(ltr), .top
+  .workspace-switcher .workspace-add-button:dir(ltr),
+  .bottom
+  .workspace-switcher .workspace-add-button:dir(ltr) {
+    border-right-width: 1px; }
+  .top .workspace-switcher .workspace-item:dir(rtl),
+  .bottom .workspace-switcher .workspace-item:dir(rtl), .top
+  .workspace-switcher .workspace-add-button:dir(rtl),
+  .bottom
+  .workspace-switcher .workspace-add-button:dir(rtl) {
+    border-left-width: 1px; }
+  .left .workspace-switcher .workspace-item,
+  .right .workspace-switcher .workspace-item, .left
+  .workspace-switcher .workspace-add-button,
+  .right
+  .workspace-switcher .workspace-add-button {
+    border-bottom-width: 1px; }
+
+.workspace-switcher .workspace-item.current-workspace {
+  background-color: rgba(26, 26, 26, 0.95); }
+
+.workspace-switcher .workspace-add-button {
+  border: none;
+  background: transparent;
+  box-shadow: none; }
+  .workspace-switcher .workspace-add-button:hover {
+    box-shadow: none; }
+  .workspace-switcher .workspace-add-button:active {
+    background-image: none; }
+  .workspace-switcher .workspace-add-button:active image {
+    margin: 1px 0 -1px; }
+
+.budgie-panel .workspace-switcher .workspace-icon-button {
+  min-height: 24px;
+  min-width: 24px;
+  padding: 0;
+  border-radius: 2px; }
+
 /************
  * Nautilus *
  ************/
@@ -5573,15 +5627,16 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
 .nautilus-window .titlebar .path-bar-box .dim-label, .nautilus-window .titlebar .path-bar-box label.separator, .nautilus-window .titlebar .path-bar-box .subtitle {
   color: transparent; }
 
+.nautilus-window .titlebar .path-bar-box widget > .text-button:last-child,
 .nautilus-window .titlebar .path-bar-box button:active, .nautilus-window .titlebar .path-bar-box button:checked {
   border-radius: 23px;
   background: linear-gradient(to right, #00c6ff, #0072ff);
   box-shadow: 0px 2px 4px rgba(0, 114, 255, 0.98);
   color: #fafafa; }
-  .nautilus-window .titlebar .path-bar-box button:active:backdrop, .nautilus-window .titlebar .path-bar-box button:checked:backdrop {
+  .nautilus-window .titlebar .path-bar-box widget > .text-button:last-child:backdrop, .nautilus-window .titlebar .path-bar-box widget > .text-button:last-child:backdrop label,
+  .nautilus-window .titlebar .path-bar-box button:active:backdrop,
+  .nautilus-window .titlebar .path-bar-box button:active:backdrop label, .nautilus-window .titlebar .path-bar-box button:checked:backdrop, .nautilus-window .titlebar .path-bar-box button:checked:backdrop label {
     color: #f0f0f0; }
-    .nautilus-window .titlebar .path-bar-box button:active:backdrop label, .nautilus-window .titlebar .path-bar-box button:checked:backdrop label {
-      color: #f0f0f0; }
 
 .nautilus-window .titlebar .linked:not(.path-bar) button:active, .nautilus-window .titlebar .linked:not(.path-bar) button:checked, .nautilus-window .titlebar .linked:not(.path-bar) button:active:backdrop, .nautilus-window .titlebar .linked:not(.path-bar) button:checked:backdrop {
   background: transparent;
@@ -5637,8 +5692,47 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   background-color: #161925; }
 
 .xfce4-panel.panel {
-  background-color: #181b28;
-  color: #C3C7D1; }
+  background-color: rgba(16, 16, 19, 0.7);
+  text-shadow: none;
+  -gtk-icon-shadow: none; }
+
+#tasklist-button {
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+  border: none;
+  background-color: rgba(16, 16, 19, 0); }
+  #tasklist-button:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.17); }
+  #tasklist-button:checked {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 -2px #0072ff; }
+
+.xfce4-panel.panel button.flat {
+  color: white;
+  border-radius: 0;
+  border: none;
+  background-color: rgba(16, 16, 19, 0); }
+  .xfce4-panel.panel button.flat:hover {
+    border: none;
+    background-color: rgba(39, 40, 47, 0.7); }
+  .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.flat:checked {
+    color: #fefefe;
+    border-bottom: 2px solid #0072ff;
+    background-color: rgba(62, 64, 75, 0.7); }
+    .xfce4-panel.panel button.flat:active label, .xfce4-panel.panel button.flat:active image, .xfce4-panel.panel button.flat:checked label, .xfce4-panel.panel button.flat:checked image {
+      color: inherit; }
+
+#whiskermenu-window button {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  font-weight: normal;
+  padding: 2px;
+  margin: 1px 0px; }
+  #whiskermenu-window button:hover, #whiskermenu-window button:checked {
+    background-color: #0072ff; }
 
 /********
  * Gala *
@@ -5995,7 +6089,7 @@ ConversationListView {
  * LightDm *
  ***********/
 #panel_window {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(16, 16, 19, 0.7);
   color: white;
   font-weight: bold;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.7); }
